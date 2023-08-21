@@ -73,7 +73,38 @@ main {
   grid-row: 1/3;
 }
 
+/* hover */
+.container {
+  position: relative;
 
+  outline: 4px solid transparent;
 
+  transition: all .4s;
+}
 
+.container span {
+  font-size: 2rem;
 
+  display: block;
+  width: 100%;
+  padding: 2.4rem;
+
+  position: absolute;
+  bottom: 0;
+
+  background-image: linear-gradient(to bottom, transparent, black 80%);
+
+  visibility:hidden;
+  opacity: 0;
+
+  transition: all .4s;
+}
+
+.container:hover span {
+  visibility: visible;
+  opacity: 1;
+}
+
+.container:hover {
+  outline-color: white;
+}
